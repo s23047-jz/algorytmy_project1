@@ -1,0 +1,16 @@
+Wnioski o przeprowadzaniu testow algorytmow sortujacych.
+
+Najszybszym algorytmem okazal sie merge sort. Jego schemat zostal umieszczony w jednej funkcji przez co jest bardziej przejrzysty.
+Na drugie miejsce zakwalifikowal sie heap sort. Patrzac na czas wykonywania danych funkcji mozna powiedziec ze jest praktycznie dwa razy wolniejszy od merge sorta.
+Na trzecim ku zaskoczeniu quick-sort. Mimo wszystko dla wiekszych tablic czas wykonania jest znaczaco wiekszy niz w poprzednich dwoch.
+Ostatnie bez zaskoczenia dostaje bubble sort. Dlugie sortowanie jest wynikiem sprawdzania wielokrotnie dwoch obietkow tablicy i znowu na nowo przejscie do poczatku. Sprawdzilem jedynie czy algorytm dobrze sortuje na tablicy długości rownej 10. Dla wiekszych tablic poddalem sie po 2 godzinach, stwierdzilem ze nie ma sensu tracic na to czasu.
+
+Chcialem rowniez zaprezentowac algorytm sortujacy drzewem binarnym ktorego uzywam w pracy glownie do przeszukiwania. Niestety problem byl taki ze nie mialem pomyslu na to aby nadpisac tablice, wiec jedynie testy za pomoca wypisywania wartosci w konsoli.
+Mimo wszystko trudno przeksztalcic algorytm do przeszukiwania na sortujacy. Jednakże czas wykonania sortowania byl 8-9 razy wiekszy od merge czy 3.5-4 razy wiekszy od heap.
+Mozna powiedziec ze jesli chodzi o czas pokonal quick sort'a.
+
+Rodzaje funkcji:
+
+Merge oraz heap liniowa, quicki.
+
+bubble kwadratowa poza skala
