@@ -1,1 +1,0 @@
-# algorytmy_project1
