@@ -1,17 +1,45 @@
 import time
 import sys
+import numpy
 from numpy import random
 
 sys.setrecursionlimit(3000)
 
-n = 500000
+n = 300000
 
+#randomowe
 array = random.randint(1, 300, n)
 array2 = random.randint(1, 300, n)
 array3 = random.randint(1, 300, n)
 array4 = random.randint(1, 300, n)
 
+#posortowane
+array_sort = []
+array2_sort = []
+array3_sort = []
+array4_sort = []
+
+
+for i in (numpy.array(range(0, 300000, 1))):
+    array_sort.append(i)
+    array2_sort.append(i)
+    array3_sort.append(i)
+    array4_sort.append(i)
+
+#posortowane odwrotnie
+array_reverse = []
+array2_reverse = []
+array3_reverse = []
+array4_reverse = []
+
+for i in (numpy.array(range(300000, 0, -1))):
+    array_reverse.append(i)
+    array2_reverse.append(i)
+    array3_reverse.append(i)
+    array4_reverse.append(i)
+
 # quick sort
+
 def partition(array, p, r):
     x = array[r]
     i = p - 1
@@ -105,35 +133,85 @@ def main():
     print("Here we go Luigi 😂🤣, and [*] for my PC\n")
     print("=======================================\n")
 
-    before_sort = array2
+    # before_sort = array2
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # quick_sort(array2, 0, len(array2) - 1)
+    # print(f"After sort: {array2}\n")
+    # print(f"{time.time() - start} seconds with quick sort\n")
+    # print("=======================================\n")
+
+    # before_sort = array3
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # merge_sort(array3)
+    # print(f"After sort: {array3}\n")
+    # print(f"{time.time() - start} seconds with merge sort\n")
+    # print("=======================================\n")
+    #
+    # before_sort = array4
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # heap_sort(array4)
+    # print(f"After sort: {array4}\n")
+    # print(f"{time.time() - start} seconds with heap sort\n")
+
+    # before_sort = array
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # bubbleSort(array)
+    # print(f"After sort with bubble sort: {array} \n")
+    # print(f"{time.time() - start} seconds with binary bubble sort\n")
+
+    #posortowane
+
+    # before_sort = array2_sort
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # quick_sort(array2_sort, 0, len(array2_sort) - 1)
+    # print(f"After sort: {array2_sort}\n")
+    # print(f"{time.time() - start} seconds with quick sort on sorted array\n")
+    # print("=======================================\n")
+    #
+    # before_sort = array3_sort
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # merge_sort(array3_sort)
+    # print(f"After sort: {array3_sort}\n")
+    # print(f"{time.time() - start} seconds with merge sort on sorted array\n")
+    # print("=======================================\n")
+
+    # before_sort = array4_sort
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # heap_sort(array4_sort)
+    # print(f"After sort: {array4_sort}\n")
+    # print(f"{time.time() - start} seconds with heap sort on sorted array\n")
+
+    #odwrotnie posortowane
+
+    before_sort = array2_reverse
     print(f"Before sort: {before_sort}\n")
     start = time.time()
-    quick_sort(array2, 0, len(array2) - 1)
-    print(f"After sort: {array2}\n")
-    print(f"{time.time() - start} seconds with quick sort\n")
+    quick_sort(array2_reverse, 0, len(array2_reverse) - 1)
+    print(f"After sort: {array2_reverse}\n")
+    print(f"{time.time() - start} seconds with quick sort on sorted array\n")
     print("=======================================\n")
 
-    before_sort = array3
-    print(f"Before sort: {before_sort}\n")
-    start = time.time()
-    merge_sort(array3)
-    print(f"After sort: {array3}\n")
-    print(f"{time.time() - start} seconds with merge sort\n")
-    print("=======================================\n")
-
-    before_sort = array4
-    print(f"Before sort: {before_sort}\n")
-    start = time.time()
-    heap_sort(array4)
-    print(f"After sort: {array4}\n")
-    print(f"{time.time() - start} seconds with heap sort\n")
-
-    before_sort = array
-    print(f"Before sort: {before_sort}\n")
-    start = time.time()
-    bubbleSort(array)
-    print(f"After sort with bubble sort: {array} \n")
-    print(f"{time.time() - start} seconds with binary bubble sort\n")
+    # before_sort = array3_reverse
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # merge_sort(array3_reverse)
+    # print(f"After sort: {array3_reverse}\n")
+    # print(f"{time.time() - start} seconds with merge sort on sorted array\n")
+    # print("=======================================\n")
+    #
+    # before_sort = array4_reverse
+    # print(f"Before sort: {before_sort}\n")
+    # start = time.time()
+    # heap_sort(array4_reverse)
+    # print(f"After sort: {array4_reverse}\n")
+    # print(f"{time.time() - start} seconds with heap sort on sorted array\n")
 
 
 main()
